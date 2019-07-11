@@ -1,0 +1,10 @@
+{
+  "name": "@trongthanh/internet-safety",
+  "version": "1.0.0",
+  "repository": "git@github.com:trongthanh/internet-safety.git",
+  "author": "Thanh Tran <trongthanh@gmail.com> (https://int3ractive.com)",
+  "license": "MIT",
+  "scripts": {
+  	"start": "bundle exec jekyll serve --incremental --host 0.0.0.0"
+  }
+}
