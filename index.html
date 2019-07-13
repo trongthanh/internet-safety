@@ -1,21 +1,171 @@
 ---
 layout: presentation
 ---
-		<div class="reveal">
-			<div class="slides">
-				<section>
-				{% assign sitePosts = site.posts | reverse | sort:date %}
-				{% assign prevYear = sitePosts[0].date | date: "%Y" %}
 
-				{% for post in sitePosts %}
-					{% assign postYear = post.date | date: "%Y" %}
+<section>
+	<section data-background-image="images/facebook-friends-network.jpg" data-background-opacity="0.7">
+		<h1>Kỹ năng an toàn trên <strong>Internet</strong> <br>và <strong>Mạng xã hội</strong></h1>
+		<p>&nbsp;</p>
+		<p>- Trần Trọng Thanh -</p>
+		<p><small>07/2019</small></p>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Những mối nguy hiểm trên Internet và Mạng xã hội</h2>
+		<h3>▼</h3>
+	</section>
+	<section>
+		<h3>Spam</h3>
+		<p>Email & tin nhắn quảng cáo</p>
+	</section>
+	<section>
+		<h3>Scam</h3>
+		<p>Email hoặc website lừa đảo</p>
+		<img src="images/scam-email.png" alt="Scam" height="600">
+		<img class="fragment fragment-replace" src="images/scam-email-info-request.png" alt="Scam" height="600">
+	</section>
+	<section>
+		<h3>Phishing</h3>
+		<p>Trang web giả mạo</p>
+		<img src="images/phishing-vcb.jpg" alt="">
+	</section>
+	<section>
+		<h3>Identity Theft</h3>
+		<p>Bị đánh cắp thông tin cá nhân</p>
+		<p>Thường do nạn nhân đăng tải</p>
+	</section>
+	<section>
+		<p>Đăng ảnh thẻ credit</p>
+		<img src="images/credit-card-photo.png" alt=""><br>
+		<a href="https://medium.com/@etiennemartin.ca/please-dont-post-pictures-of-your-credit-cards-online-829dcf8cf472">Link bài viết</a>
+	</section>
+	<section>
+		<p>Đăng ảnh thẻ lên máy bay (boarding pass)</p>
+		<img src="images/insta-boarding-pass.png" alt="">
+		<img class="fragment fragment-replace" src="images/boarding-pass-code.png" alt="">
+	</section>
+	<section>
+		<p>Câu chuyện có thật</p>
+		<img src="images/identity-theft-case.png" alt="">
+	</section>
+	<section>
+		<h3>Malware</h3>
+		<p>Mã độc, virus phát tán qua Internet</p>
+	</section>
+	<section>
+		<p>2018+</p>
+		<h4 class="fragment">Đào tiền ảo bằng máy khách</h4>
+		<p class="fragment">Website sẽ nhúng mã JavaScript để lợi dụng tài nguyên của máy khách giải quyết các bài toán hashing, giúp chủ nhân đào tiền ảo.</p>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Những quy tắc chung để bảo vệ an toàn thông tin và tài khoản cá nhân</h2>
+		<h3>▼</h3>
+	</section>
+	<section>
+		<h3>Có những loại tài khoản nào?</h3>
+		<ul>
+			<li class="fragment">Email <span class="fragment">(Gmail, Outlook, Yahoo...)</span></li>
+			<li class="fragment">Tài khoản ngân hàng trực tuyến <span class="fragment">(Vietcombank, ACB...)</span></li>
+			<li class="fragment">Tài khoản ứng dụng thanh toán trung gian <span class="fragment">(Paypal, Momo, Ngân Lượng)</span></li>
+			<li class="fragment">Tài khoản trang mua sắm trực tuyến <span class="fragment">(Tiki, Lazada, Shopee...)</span></li>
+			<li class="fragment">Tài khoản dịch vụ online <span class="fragment">(Spotify, Zing, Youtube...)</span></li>
+			<li class="fragment">Tài khoản MXH và diễn đàn trực tuyến <span class="fragment">(Facebook, Instagram, Reddit...)</span></li>
+			<li class="fragment">Tài khoản đồng bộ hóa <span class="fragment">(iCloud, Google, Samsung, Mi...)</span></li>
+			<li class="fragment">...</li>
+		</ul>
+	</section>
+	<section>
+		<h4>Những quy tắc chung:</h4>
+		<ul>
+			<li class="fragment">Bật 2FA cho email chính</li>
+			<li class="fragment">Sử dụng mật khẩu dài, cài đặt số điện thoại khôi phục tài khoản.</li>
+			<li class="fragment">Tránh sử dụng một mật khẩu cho nhiều tài khoản</li>
+			<li class="fragment">Luôn đăng xuất sau khi sử dụng máy tính công cộng</li>
+			<li class="fragment">Hạn chế đăng nhập vào tài khoản ngân hàng và thanh toán sử dụng wifi công cộng.</li>
+			<li class="fragment">Không đăng hình thẻ ngân hàng, passpord, và hình chụp có thông tin cá nhân lên mạng.</li>
+			<li class="fragment">Cài đặt tài khoản mạng xã hội chỉ chia sẻ với bạn bè.</li>
+			<li class="fragment">Sử dụng các công cụ hỗ trợ bảo mật thông tin (phần sau)</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Làm gì khi bị mất tài khoản</h2>
+		<h3>▼</h3>
+	</section>
+	<section>
+		<h3>Mất tài khoản email:</h3>
 
-					{% if prevYear != postYear %}
-						{% assign prevYear = postYear %}
-						</section><section>
-					{% endif %}
-
-					<section>{{ post.content }}</section>
-				{% endfor %}
-			</div>
-		</div>
+		<ul>
+			<li class="fragment">
+				Sử dụng chức năng khôi phục mật khẩu:
+				<ul>
+					<li>Trả lời câu hỏi khôi phục</li>
+					<li>Gửi link cài đặt lại mật khẩu vào email phụ</li>
+				</ul>
+			</li>
+			<li class="fragment">
+				Sử dụng chức năng khôi phục tài khoản
+				<ul>
+					<li>Ví dụ Google: https://www.techykeeday.com/google-account-recovery/</li>
+				</ul>
+			</li>
+			<li class="fragment">Liên hệ với nhà cung cấp dịch vụ.</li>
+		</ul>
+	</section>
+	<section>
+		<h3>
+			Mất tài khoản trực tuyến nói chung:
+		</h3>
+		<ul>
+			<li class="fragment">Vào bằng thiết bị có thể truy cập + nếu vẫn còn vào được: cài đặt lại password, tìm đến lựa chọn: đăng xuất khỏi tất cả thiết bị.</li>
+			<li class="fragment">Sử dụng chức năng reset password: gửi link reset password đến email đăng ký tài khoản.</li>
+			<li class="fragment">Sử dụng chức năng khôi phục tài khoản.</li>
+			<li class="fragment">Liên hệ với nhà cung cấp dịch vụ.</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Những công cụ để bảo mật thông tin và tài khoản cá nhân</h2>
+		<h3>▼</h3>
+	</section>
+	<section>
+		<h3>Trình quản lý mật khẩu: <a href="https://www.lastpass.com">LastPass</a></h3>
+	</section>
+	<section>
+		<h3>Extension chặn quảng cáo và theo dõi: uBlock Origin</h3>
+		<img src="images/ublock-origin-screenshot.png" alt="">
+	</section>
+	<section>
+		<h3>Trình duyệt an toàn và tôn trọng riêng tư: <a href="http://firefox.com">Firefox</a>, <a href="https://brave.com/">Brave</a></h3>
+	</section>
+	<section>
+		<h3>Kiểm tra email của bạn đã bị lộ chưa:</h3>
+		<h3><a href="https://haveibeenpwned.com/">haveibeenpwned.com</a></h3>
+	</section>
+	<section>
+		<h3>Tip: Dùng địa chỉ Gmail mở rộng để dễ dàng lọc thư đến</h3>
+		<p>VD với: <strong>tranvanteo@gmail.com</strong></p>
+		<p>Hai cách viết hợp lệ:</p>
+		<p>tranvanteo<strong><u>+spam</u></strong>@gmail.com</p>
+		<p>tran<strong><u>.</u></strong>van<strong><u>.</u></strong>teo@gmail.com</p>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Cách phát hiện và đánh giá độ an toàn của website</h2>
+		<h3>▼</h3>
+		<ul>
+			<li class="fragment">Website có sử dụng HTTPS?</li>
+			<li class="fragment">Trang đăng nhập có sử dụng HTTPS? Trang thanh toán có sử dụng HTTPS?</li>
+			<li class="fragment">Website yêu cầu đăng ký tài khoản có trang thỏa thuận quyền riêng tư hay không?</li>
+			<li class="fragment">Khi đăng ký tài khoản, phải có bước xác nhận địa chỉ email.</li>
+			<li class="fragment">Khi thanh toán trực tuyến, thanh toán được thực hiện bởi kênh trung gian có uy tín (Paypal, Stripe, NAPAS, OnePay, Momo, ...)</li>
+			<li class="fragment">Khi thanh toán trực tuyến, cẩn trọng với website yêu cầu nhập thông tin thẻ credit ngay tại website.</li>
+		</ul>
+	</section>
+</section>

@@ -5,6 +5,9 @@
   "author": "Thanh Tran <trongthanh@gmail.com> (https://int3ractive.com)",
   "license": "MIT",
   "scripts": {
-  	"start": "bundle exec jekyll serve --incremental --host 0.0.0.0"
+    "build": "bundle exec jekyll build",
+    "dev": "bundle exec jekyll build --incremental --watch",
+    "serve": "live-server --no-css-inject --wait=200 _site",
+    "start": "yarn dev & yarn serve"
   }
 }
